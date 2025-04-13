@@ -1,0 +1,19 @@
+<button mat-button [matMenuTriggerFor]="mainOptions">Main</button>
+<button mat-button [matMenuTriggerFor]="settings">Settings</button>
+<button mat-button [matMenuTriggerFor]="profile">Hello, user!</button>
+
+<mat-menu #mainOptions="matMenu">
+    <button mat-menu-item>Option 1</button>
+    <button mat-menu-item>Option 2</button>
+</mat-menu>
+
+<mat-menu #settings="matMenu">
+    <button mat-menu-item>Settings 1</button>
+    <button mat-menu-item>Settings 2</button>
+</mat-menu>
+
+<mat-menu #profile="matMenu">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item (click)="logout()">Log Out</button>
+</mat-menu>
+
