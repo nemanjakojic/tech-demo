@@ -6,7 +6,7 @@ import { CanActivateFn, Router } from '@angular/router';
 export const redirectGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
   const router = inject(Router);
-
+  
   return authService.isLoggedIn().pipe(
     take(1),
     map(isLoggedIn => {
