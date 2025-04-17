@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import styles from './Login.module.css';
+import api from '../../services/axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     console.log('Email:', email);
     console.log('Password:', password);
+    
+    const res = await api.post('/Account/login', { email, password });
+    return res.data;
   };
 
   return (
