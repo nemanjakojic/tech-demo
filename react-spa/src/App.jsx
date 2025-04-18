@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './components/Login/Login'
+import './App.css';
+import { Router } from 'react-router-dom';
+import AppRoutes from './components/Routing/AppRoutes';
 
 function App() {    
   return (
-    <>
-      <Login />
-    </>
-  )
+    <Router>
+      <AppRoutes />
+    </Router>
+  );
 }
 
 export default App
